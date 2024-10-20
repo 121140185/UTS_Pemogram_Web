@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Formulir</title>
+    <link rel="stylesheet" href="coba_style.css">
+    <style>
+        .form-container {
+    background-color: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+.form-group label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space below labels */
+    color: #2c3e50; /* Dark color for labels */
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="password"] {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button {
+    background-color: #2ecc71; /* Green background for the button */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+
+}
+
+button:hover {
+    background-color: #27ae60; /* Darker green on hover */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <header class="header">
+            <h1>Formulir</h1>
+        </header>
+
+        <div class="row">
+            <aside class="sidebar">
+                <h2><b></b></h2>
+                <nav>
+                    <a href="Halaman_Utama.html">Dashboard</a>
+                    <a href="Formulir.html">Formulir</a>
+                    <a href="tabel.html">Tabel</a>
+                </nav>
+            </aside>
+
+            <main class="main">
+                <form action="process_form.php" method="GET" class="form-container">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Birthdate:</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <div>
+                            <label for="male">
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            Male</label>
+                        </div>
+                        <div>
+                            <label for="female">
+                            <input type="radio" id="female" name="gender" value="female" required>
+                            Female</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hobbies">Hobbies:</label>
+                        <div>
+                            <input type="checkbox" id="sports" name="hobbies" value="sports">
+                            <label for="sports">Sports</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="music" name="hobbies" value="music">
+                            <label for="music">Music</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="reading" name="hobbies" value="reading">
+                            <label for="reading">Reading</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <center><button type="submit">Submit</button></center>
+                </form>
+            </main>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 My Website. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
